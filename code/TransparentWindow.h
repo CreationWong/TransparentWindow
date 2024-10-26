@@ -2,7 +2,7 @@
  * TransparentWindow 是一个创建防截屏和录屏的隐私防护窗口的 DLL .
  *
  * @file TransparentWindow.h
- * @version V1.1.0
+ * @version V1.1.1
  * @author CreationWong
  * @copyright Copyright © 2024 CreationWong
  *
@@ -23,22 +23,21 @@ extern "C" {
 
 /**
  * @brief CreateTransparentWindow 创建窗口函数
- * @version V1.1.1
+ * @version V1.1.2
  *
  * 更新内容：
- * 1.添加窗口类修改变量
- * 2.修改 title 、CLASS_NAME 为 const
+ * 1.修改部分名称
  *
- * @param title 窗口名称
- * @param CLASS_NAME 窗口类名称
- * @param x 窗口位置 X 轴
- * @param y 窗口位置 Y 轴
- * @param width 窗口宽度
- * @param height 窗口高度
+ * @param Title 窗口名称
+ * @param className 窗口类名称
+ * @param X 窗口位置 X 轴
+ * @param Y 窗口位置 Y 轴
+ * @param Width 窗口宽度
+ * @param Height 窗口高度
  *
  */
 TRANSPARENTWINDOW_API void
-CreateTransparentWindow(const char title[], const char CLASS_NAME[], int x, int y, int width, int height);
+CreateTransparentWindow(const char Title[], const char className[], int X, int Y, int Width, int Height);
 
 /**
  * @brief DestroyTransparentWindow 关闭由 CreateTransparentWindow 创建的窗口

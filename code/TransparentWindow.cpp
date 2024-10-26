@@ -14,13 +14,13 @@ LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 // 全局变量
 HWND hwnd = nullptr;
 
-void CreateTransparentWindow(const char title[], const char CLASS_NAME[], int x, int y, int width, int height) {
+void CreateTransparentWindow(const char Title[], const char className[], int X, int Y, int Width, int Height) {
 
     // 初始化窗口类结构体
     WNDCLASS wc = {};
     wc.lpfnWndProc   = WndProc;         // 窗口过程函数
     wc.hInstance     = GetModuleHandle(nullptr);  // 实例句柄
-    wc.lpszClassName = CLASS_NAME;      // 窗口类名
+    wc.lpszClassName = className;      // 窗口类名
 
     // 注册窗口类
     if (!RegisterClass(&wc)) {
@@ -30,11 +30,11 @@ void CreateTransparentWindow(const char title[], const char CLASS_NAME[], int x,
     // 创建窗口
     hwnd = CreateWindowEx(
             WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW,                  // 扩展样式
-            CLASS_NAME,                                                        // 窗口类名
-            title,                                          // 窗口标题
+            className,                                                        // 窗口类名
+            Title,                                          // 窗口标题
             WS_POPUP | WS_VISIBLE,                                              // 窗口样式
-            x, y,                                                                      // 初始位置
-            width, height,                                             // 初始大小
+            X, Y,                                                                      // 初始位置
+            Width, Height,                                             // 初始大小
             nullptr,                                                       // 父窗口句柄
             nullptr,                                                          // 菜单句柄
             GetModuleHandle(nullptr),                         // 应用程序实例句柄
