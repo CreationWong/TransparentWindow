@@ -3,4 +3,4 @@ project(TransparentWindow)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_library(TransparentWindow SHARED code/library.cpp)
+add_library(TransparentWindow SHARED code/TransparentWindow.cpp)
