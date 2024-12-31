@@ -25,9 +25,6 @@ extern "C" {
  * @brief CreateTransparentWindow 创建窗口函数
  * @version V1.1.2
  *
- * 更新内容：
- * 1.修改部分名称
- *
  * @param Title 窗口名称
  * @param className 窗口类名称
  * @param X 窗口位置 X 轴
